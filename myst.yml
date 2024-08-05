@@ -1,0 +1,16 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e64b1cd2-fa3e-4133-b63e-e77e40c829ea
+  title: q2-boots documentation
+  description: q2-boots documentation
+  keywords: ["QIIME 2", "plugin", "boots", "bootstrap", "rarefaction", "microbiome"]
+   #authors: ["Caporaso Lab"]
+  github: https://github.com/caporaso-lab/q2-boots
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  options:
+    favicon: ./images/favicon.ico
+    logo: ./images/qiime2-rect-100.png
+    logo_dark: ./images/qiime2-rect-inv-100.png
