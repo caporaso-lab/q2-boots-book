@@ -1,0 +1,7 @@
+name: q2-boots-book
+channels:
+- conda-forge
+- defaults
+dependencies:
+  - pip:
+    - jupyter-book

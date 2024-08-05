@@ -1,7 +1,5 @@
 # q2-boots 🥾
 
-<img src="./images/q2-boots-ai-art.png" width=500 alt="Boots covered in cartoony microorganisms" align="right">
-
 q2-boots is a [QIIME 2](https://qiime2.org) plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.
 
 ## Development status
@@ -71,3 +69,4 @@ To learn QIIME 2 plugin development, refer to [*Developing with QIIME 2*](https:
 Please be aware that because community plugins are developed by the QIIME 2 developer community, and not necessarily the QIIME 2 developers themselves, some may not be actively maintained or compatible with current release versions of the QIIME 2 distributions.
 More information on development and support for community plugins can be found [here](https://library.qiime2.org).
 
+![](./images/q2-boots-ai-art.png)

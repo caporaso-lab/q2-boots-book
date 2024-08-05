@@ -1,0 +1,26 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: q2-boots documentation
+author: Caporaso Lab
+logo: images/qiime2-rect-100.png
+logo_dark: images/qiime2-rect-inv-100.png
+
+execute:
+  execute_notebooks: force
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+repository:
+  url: https://github.com/caporaso-lab/q2-boots-book
+  path_to_book: book
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
