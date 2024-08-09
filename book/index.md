@@ -1,6 +1,6 @@
 # q2-boots 🥾
 
-q2-boots is a [QIIME 2](https://qiime2.org) plugin providing bootstrapped and rarefaction-based (i.e., resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.
+q2-boots is a [QIIME 2](https://qiime2.org) plugin providing bootstrapped and rarefaction-based (collectively, resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.
 
 ## Development status
 
@@ -22,7 +22,6 @@ conda update conda
 ### QIIME 2024.10 development version of q2-boots
 
 Installing the most recent development version of q2-boots allows you to access the most recent functionality, including some that depends on features being introduced in QIIME 2 2024.10.
-It is hard to unambiguously reference development versions of software in publications however, so you'll likely want to re-run your boots analyses with a release version prior to publication.
 
 ```shell
 conda env create -n q2-boots-2024.10 -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environments/q2-boots-qiime2-amplicon-2024.10.yml
@@ -34,23 +33,42 @@ conda activate q2-boots-2024.10
 
 ## Using `q2-boots`
 
-After completing the install steps above, make QIIME 2's command line interface aware of `q2-boots` by running:
-
-```shell
-qiime dev refresh-cache
-```
-
-You should then see the plugin in the list of available plugins if you run:
-
-```shell
-qiime info
-```
-
-You should be able to review the help text by running:
+After completing the install steps above, you can review the top-level q2-boots help text by running:
 
 ```shell
 qiime boots --help
 ```
+
+To view the help text for a specific command, including executable usage examples, you can run:
+
+```shell
+qiime boots core-metrics --help
+```
+
+This will display the help text for the `core-metrics` command.
+Calling `core-metrics` with the `--example-data` parameter will write example data to the directory of your choosing.
+For example:
+
+```shell
+qiime boots core-metrics --example-data cm-example-data
+```
+
+will write example input data to a new `cm-example-data` directory.
+That directory will contain a sub-directory per usage example:
+
+```shell
+cm-example-data
+├── Bootstrapped core metrics.
+│   ├── metadata.tsv
+│   └── table.qza
+└── Rarefaction-based core metrics.
+    ├── metadata.tsv
+    └── table.qza
+```
+
+Notice that the subdirectory names align with names of the usage examples in the core-metrics `--help` text.
+Change into one of those directories and run the corresponding usage example to test out the command.
+You can then adapt the usage example commands to apply to your own data.
 
 Have fun! 😎
 
