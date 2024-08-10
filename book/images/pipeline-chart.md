@@ -6,8 +6,8 @@ flowchart TD
     n(["n (Int)"]) --> resample
     sampling-depth(["sampling-depth (Int)"]) --> resample
     replacement(["replacement (Bool)"]) --> resample
-    resample{qiime feature-table resample} -->
-    feature-collection["Collection[FeatureTable]"]
+    resample{"qiime feature-table resample"} --> feature-collection
+    feature-collection[["FeatureTable"]]
 ```
 
 # (B) `alpha` `Pipeline`
@@ -21,11 +21,11 @@ flowchart TD
     sampling-depth(["sampling-depth (Int)"]) --> alpha-collection
     replacement(["replacement (Bool)"]) --> alpha-collection
     alpha-metric(["metric (30 choices)"]) --> alpha-collection
-    alpha-collection{qiime diversity alpha-collection} --> sd-collection
+    alpha-collection{qiime diversity alpha-collection} --> alpha-diversity-collection
     average-method(["average method (Choice: median, mean)"]) --> alpha-average
-    sd-collection["Collection[SampleData[AlphaDiversity]]"] -->
-    alpha-average{qiime boots alpha-average} -->
-    sample-data["SampleData[AlphaDiversity]"]
+    alpha-diversity-collection[["SampleData[AlphaDiversity]"]] --> alpha-average
+    alpha-average{qiime boots alpha-average} --> alpha-diversity
+    alpha-diversity["SampleData[AlphaDiversity]"]
 ```
 
 
@@ -40,23 +40,18 @@ flowchart TD
     sampling-depth(["sampling-depth (Int)"]) --> beta-collection
     replacement(["replacement (Bool)"]) --> beta-collection
     beta-metric(["metric (22 choices)"]) --> beta-collection
-    beta-collection{qiime diversity beta-collection} --> dm-collection
+    beta-collection{qiime diversity beta-collection} --> distance-matrix-collection
     average-method(["average method (Choice: medoid, non-metric-mean, non-metric-median)"]) --> beta-average
-    dm-collection[["DistanceMatrix"]] --> beta-average
-    beta-average{qiime boots beta-average} -->
+    distance-matrix-collection[["DistanceMatrix"]] --> beta-average
+    beta-average{qiime boots beta-average} --> distance-matrix
     distance-matrix["DistanceMatrix"]
 ```
 
+# Diagram key
 ```mermaid
 flowchart LR
-    function-call{QIIME 2 `Action`}
-    QIIME 2 `Artifact`
+    action{Action}
+    artifact[Artifact]
+    artifact-collection[[Artifact collection]]
     parameter([parameter])
-
-    style Beta fill:#CC6677
-    style Alpha fill:#88CCEE
-    AB[Alpha and Beta]
-    style AB fill:#DDCC77
-    core-metrics[Core Metrics]
-    style core-metrics fill:white
 ```
