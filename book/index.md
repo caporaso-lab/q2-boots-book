@@ -1,7 +1,5 @@
 # q2-boots 🥾
 
-![GitHub Repo stars](https://img.shields.io/github/stars/caporaso-lab/q2-boots)
-
 q2-boots is a [QIIME 2](https://qiime2.org) plugin providing bootstrapped and rarefaction-based (collectively, resampled) alpha and beta diversity analyses, designed to mirror the interface of q2-diversity.
 
 ```{admonition} Development status

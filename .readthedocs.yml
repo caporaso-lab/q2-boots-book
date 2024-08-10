@@ -14,7 +14,6 @@ conda:
 
 sphinx:
   builder: html
-  # fail on warning is false until i get the API doc build sorted out
   fail_on_warning: false
 
 formats:
