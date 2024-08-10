@@ -1,5 +1,7 @@
-# (A) `resample` `Pipeline`
-```mermaid
+# Diagram of q2-boots `Pipelines`
+
+## `resample` `Pipeline`
+```{mermaid}
 flowchart TD
 
     feature-table["FeatureTable"] --> resample
@@ -10,9 +12,9 @@ flowchart TD
     feature-collection[["FeatureTable"]]
 ```
 
-# (B) `alpha` `Pipeline`
+## `alpha` `Pipeline`
 
-```mermaid
+```{mermaid}
 flowchart TD
 
     feature-table["FeatureTable"] --> alpha-collection
@@ -29,9 +31,9 @@ flowchart TD
 ```
 
 
-# (C) `beta` `Pipeline`
+# `beta` `Pipeline`
 
-```mermaid
+```{mermaid}
 flowchart TD
 
     feature-table["FeatureTable"] --> beta-collection
@@ -48,10 +50,14 @@ flowchart TD
 ```
 
 # Diagram key
-```mermaid
+```{mermaid}
 flowchart LR
     action{Action}
     artifact[Artifact]
     artifact-collection[[Artifact collection]]
     parameter([parameter])
 ```
+
+# `core-metrics` `Pipeline`
+
+*I haven't got around to creating this one yet, but it's effectively a combination of the above three, except that the same resampled tables are used for all alpha and beta diversity metric calculations.*

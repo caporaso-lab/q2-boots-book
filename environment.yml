@@ -4,3 +4,4 @@ channels:
 dependencies:
   - pip:
     - jupyter-book
+    - sphinxcontrib-mermaid
