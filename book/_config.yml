@@ -3,8 +3,20 @@
 
 title: q2-boots documentation
 author: Caporaso Lab
-logo: images/qiime2-rect-100.png
-logo_dark: images/qiime2-rect-inv-100.png
+copyright: "2024"
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+
+sphinx:
+  config:
+    html_theme_options:
+      logo:
+        image_light: _static/dwq2-light.png
+        image_dark: _static/dwq2-dark.png
+      show_navbar_depth: 2
+
+    # Don't include the prompt (or outputs) in the copied text
+    copybutton_prompt_text: '>>> |\.\.\. '
+    copybutton_prompt_is_regexp: true
 
 execute:
   execute_notebooks: force
@@ -14,7 +26,7 @@ latex:
     targetname: book.tex
 
 bibtex_bibfiles:
-  - references.bib
+  - _static/references.bib
 
 repository:
   url: https://github.com/caporaso-lab/q2-boots-book
@@ -24,3 +36,8 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: _static/favicon.ico
+
+parse:
+  myst_substitutions:
+    miniconda_url: "[Miniconda](https://conda.io/miniconda.html)"
