@@ -118,6 +118,7 @@ If you need help with q2-boots, please get in touch on the [QIIME 2 Forum](https
 ## About `q2-boots`
 
 `q2-boots` was developed for a Master’s degree in Computer Science project at [Northern Arizona University (NAU)](https://www.nau.edu), and will be maintained by the [Caporaso Lab](https://cap-lab.bio) at NAU.
+If you use q2-boots in published work, please cite it as referenced here {cite}`Raspet2024`.
 
 `q2-boots` was derived from content in the [QIIME 2 plugin template](https://develop.qiime2.org/en/latest/plugins/tutorials/create-from-template.html) (q2-boots existed before the plugin template, so didn't use it directly).
 To learn how to use `q2-boots`, refer to the [plugin documentation](https://q2-boots.readthedocs.io/en/latest/).
@@ -130,3 +131,10 @@ Because community plugins are developed by the QIIME 2 developer community, and 
 More information on development and support for community plugins can be found [here](https://library.qiime2.org).
 
 ![](./_static/q2-boots-ai-art.png)
+
+
+## References
+
+```{bibliography}
+:style: unsrt
+```

@@ -9,7 +9,9 @@ exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
+    - sphinxcontrib.bibtex
   config:
+    bibtex_reference_style: label
     html_theme_options:
       logo:
         image_light: _static/dwq2-light.png
