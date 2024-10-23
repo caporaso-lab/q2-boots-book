@@ -31,7 +31,7 @@ Since q2-boots is still under active development, there may be some new function
 ```shell
 conda env create \
   -n q2-boots-2024.5.beta \
-  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environments/q2-boots-qiime2-amplicon-2024.5.yml
+  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environment-files/q2-boots-qiime2-amplicon-2024.5.yml
 ```
 
 ```shell
@@ -46,7 +46,7 @@ Referencing specific versions of q2-boots is still possible --- just be sure to 
 ```shell
 conda env create \
   -n q2-boots-2024.10.dev \
-  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environments/q2-boots-qiime2-amplicon-2024.10.yml
+  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environment-files/q2-boots-qiime2-amplicon-2024.10.yml
 ```
 
 ```shell
