@@ -23,34 +23,34 @@ conda update conda
 ### Step 2: Install q2-boots
 
 `````{tab-set}
-````{tab-item} 2024.5.beta release
-Installing the release version of q2-boots allows you to access the most stable version of the functionality in a QIIME 2 2024.5 release environment.
-This is most convenient if you need to reference a specific version of q2-boots in a publication (you would refer to it as the *2024.5.beta release of q2-boots*.)
+````{tab-item} 2024.10.beta release
+Installing the release version of q2-boots allows you to access the most stable version of the functionality in a QIIME 2 2024.10 release environment.
+This is most convenient if you need to reference a specific version of q2-boots in a publication (you would refer to it as the *2024.10.beta release of q2-boots*.)
 Since q2-boots is still under active development, there may be some new functionality that isn't included in this release.
 
 ```shell
 conda env create \
-  -n q2-boots-2024.5.beta \
-  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environment-files/q2-boots-qiime2-amplicon-2024.5.yml
-```
-
-```shell
-conda activate q2-boots-2024.5.beta
-```
-````
-
-````{tab-item} Latest development version
-Installing the most recent development version of q2-boots allows you to access the most recent functionality, including some that depends on features being introduced in the 2024.10 version of the QIIME 2 Framework. 🔧
-Referencing specific versions of q2-boots is still possible --- just be sure to hang on to your QIIME 2 `Results` and/or `Visualizations`, so you can review the specific revisions (including git commit hashes) in your data provenance.
-
-```shell
-conda env create \
-  -n q2-boots-2024.10.dev \
+  -n q2-boots-2024.10.beta \
   -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environment-files/q2-boots-qiime2-amplicon-2024.10.yml
 ```
 
 ```shell
-conda activate q2-boots-2024.10.dev
+conda activate q2-boots-2024.10.beta
+```
+````
+
+````{tab-item} Latest development version
+Installing the most recent development version of q2-boots allows you to access the most recent functionality, including some that depends on features being introduced in the 2025.4 version of the QIIME 2 Framework. 🔧
+Referencing specific versions of q2-boots is still possible --- just be sure to hang on to your QIIME 2 `Results` and/or `Visualizations`, so you can review the specific revisions (including git commit hashes) in your data provenance.
+
+```shell
+conda env create \
+  -n q2-boots-2025.4.dev \
+  -f https://raw.githubusercontent.com/qiime2/q2-boots/main/environment-files/q2-boots-qiime2-amplicon-2025.4.yml
+```
+
+```shell
+conda activate q2-boots-2025.4.dev
 ```
 ````
 `````
