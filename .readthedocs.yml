@@ -14,6 +14,7 @@ conda:
 
 sphinx:
   builder: html
+  configuration: book/conf.py
   fail_on_warning: false
 
 formats:
