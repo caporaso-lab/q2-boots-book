@@ -1,3 +1,1 @@
-# q2-boots-book
-
-This is the source for the q2-boots documentation, hosted at https://q2-boots.readthedocs.io/. 
+This documentation transitioned to the q2-boots repository [here](https://github.com/caporaso-lab/q2-boots/tree/main/docs). 
